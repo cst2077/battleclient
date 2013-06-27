@@ -16,15 +16,7 @@ public class Client implements Runnable{
 		crObj = new Craft();
 	}
 	public Client( Craft newcrObj){
-		System.out.println(newcrObj);
 		crObj = newcrObj;
-		System.out.println(crObj);
-		try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 	}
    public void run() {
 
@@ -60,28 +52,22 @@ public class Client implements Runnable{
        while(true) {
        	   playerX = crObj.x;
     	   playerY = crObj.y;
-     	   try {
-
-     		    
- 
-        	   System.out.println(crObj);
-        	   System.out.println(playerX);
-        	   Thread.sleep(100);
+     	   try{
+     		   Thread.sleep(10);
+        	   System.out.println(playerY);
      		   out.writeInt(playerX);
      		   out.flush();
 	     	   out1.writeInt(playerY);
 	     	   out1.flush();
 	     	   
      	   } catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
      	   } catch (InterruptedException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-     	   
       }
       //client.close();
      //client1.close();
    }
 }
+

@@ -34,12 +34,7 @@ public class Board extends JPanel implements ActionListener {
 
 
     public void paint(Graphics g) {
-        super.paint(g);try {
-			Thread.sleep(1000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+        super.paint(g);
 
         Graphics2D g2d = (Graphics2D)g;
         g2d.drawImage(craft.getImage(), craft.getX(), craft.getY(), this);

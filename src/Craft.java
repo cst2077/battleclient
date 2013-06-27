@@ -25,7 +25,6 @@ public class Craft {
 
 
     public void move() {
-    	System.out.println(this);
         x += dx;
         y += dy;
         
